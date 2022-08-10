@@ -118,7 +118,7 @@ const updatedCart = async (req, res) => {
         let data = req.body;
         let { productId, cartId, removeProduct } = data;
 
-        removeProduct = parseInt(removeProduct)
+        removeProduct = parseInt(removeProduct) // convert into number from string
 
         if (Object.keys(data).length == 0) return res.status(400).send({ status: false, message: 'please enter data to update' })
 
